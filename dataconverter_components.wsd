@@ -1,10 +1,11 @@
 @startuml dc_components
-database WebCrawler_MySQL
+database WebCrawler_MySQL [WebCrawler mySQL]
 rectangle DataConverter
 database Solr_Core
 
-Solr_Core -- DataConverter
-DataConverter -- WebCrawler_MySQL
+
+Solr_Core <- DataConverter
+DataConverter <- WebCrawler_MySQL
 
 
 @enduml
