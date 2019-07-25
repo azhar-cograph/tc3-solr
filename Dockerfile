@@ -32,6 +32,7 @@ CMD  cd /opt/solr-${SOLR_VERSION} && \
 # Create Schema
  curl -X POST -H 'Content-type:application/json' --data-binary '{"add-field": {"name":"manufacturer_name", "type":"string", "required":true, "indexed":true, "stored":true}}' http://localhost:8983/solr/manufacturer_product/schema
 
-
+# build Dockerfile: docker build -t testsolr .
+# run docker container: docker run -t --name testcont-solr -p 8983:8983 testsolr:latest
 
 
